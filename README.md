@@ -54,7 +54,7 @@ cd "$BASEDIR/seqtk"
 make
 ```
 
-bam2iupac
+bam2iupac (https://github.com/kullrich/bam2iupac)
 ```
 cd "$BASEDIR"
 git clone --recursive https://github.com/kullrich/bam2iupac
