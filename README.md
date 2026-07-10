@@ -3,7 +3,13 @@
 ## Introduction
 
 A quick pipeline to infer population size history starting from
-FASTQ files or directly from already mapped BAM files like human .
+FASTQ files or directly from already mapped BAM files like human
+history data (denisova and neandertal).
+
+BAM sources:
+
+- https://cdna.eva.mpg.de/neandertal
+- https://cdna.eva.mpg.de/denisova
 
 Requirements:
 
