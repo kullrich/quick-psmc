@@ -18,6 +18,14 @@ Requirements:
 
 ## Install
 
+gnuplot
+```
+#Ubuntu
+apt-get install gnuplot
+#Rocky Linux
+dnf install gnuplot
+```
+
 define base directory
 ```
 export BASEDIR=$HOME/opt
