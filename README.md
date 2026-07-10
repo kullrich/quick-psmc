@@ -64,6 +64,15 @@ make
 
 ## Example
 
+To mask problematic regions, like coverage depth,
+use the options provided by `bam2iupac`:
+```
+  --minMQ      Minimum mapping quality (default: 0)
+  --minBQ      Minimum base quality (default: 0)
+  --minC       Minimum coverage (default: 0)
+  --maxC       Maximum coverage (default: 9999)
+```
+
 ### FASTQ >>> BAM >>> IUPAC >>> PSMC
 
 create working directory
@@ -88,7 +97,20 @@ mkdir -p "$WORKDIR"
 cd "$WORKDIR"
 ```
 
-Extract chromosomes already mapped BAM file
+Extract chromosomes from already mapped BAM file
+```
+"$BASEDIR/bam2iupac/bam2iupac" --b \
+https://cdna.eva.mpg.de/denisova/alignments/T_hg19_1000g.bam \
+--n Denisova \
+--r 1:0-0 > Denisova_chr1.fasta
+
+"$BASEDIR/bam2iupac/bam2iupac" --b \
+https://cdna.eva.mpg.de/neandertal/altai/AltaiNeandertal/bam/AltaiNea.hg19_1000g.1.dq.bam \
+--n AltaiNea \
+--r 1:0-0 > AltaiNea_chr1.fasta
+```
+
+Convert IUPAC FASTA to FASTQ
 ```
 
 ```
